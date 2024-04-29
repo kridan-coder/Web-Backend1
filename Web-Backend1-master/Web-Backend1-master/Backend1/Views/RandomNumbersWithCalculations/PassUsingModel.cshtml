@@ -1,0 +1,16 @@
+﻿@model Backend1.Models.ShowNumberModel
+@{
+    Model.Title = "Calculation via Model";
+}
+
+
+<h2>Calculation via Model</h2>
+<dl class="dl-horizontal">
+    <ul>
+        <li>@Model.GeneratedNumber1 + @Model.GeneratedNumber2 = <b>@Model.AdditionResult</b></li>
+        <li>@Model.GeneratedNumber1 - @Model.GeneratedNumber2 = <b>@Model.SubstractionResult</b></li>
+        <li>@Model.GeneratedNumber1 * @Model.GeneratedNumber2 = <b>@Model.MultiplicationResult</b></li>
+        <li>@Model.GeneratedNumber1 / @Model.GeneratedNumber2 = <b>@Model.DivisionResult</b></li>
+    </ul>
+
+</dl>

@@ -1,0 +1,15 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Calculation via ViewData";
+}
+
+<h2>Calculation via ViewData</h2>
+<dl class="dl-horizontal">
+    <ul>
+        <li>@ViewData["Number1"] + @ViewData["Number2"] = <b>@ViewData["AdditionResult"]</b></li>
+        <li>@ViewData["Number1"] - @ViewData["Number2"] = <b>@ViewData["SubstractionResult"]</b></li>
+        <li>@ViewData["Number1"] * @ViewData["Number2"] = <b>@ViewData["MultiplicationResult"]</b></li>
+        <li>@ViewData["Number1"] / @ViewData["Number2"] = <b>@ViewData["DivisionResult"]</b></li>
+    </ul>
+
+</dl>

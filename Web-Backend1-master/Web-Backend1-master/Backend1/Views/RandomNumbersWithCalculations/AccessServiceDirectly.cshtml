@@ -1,0 +1,23 @@
+﻿@using Backend1.Services
+@model dynamic
+@inject IRandomNumberInRangeService RandomNumberInRangeService
+@inject ICalculationService CalculationService
+
+@{
+    int number1 = @RandomNumberInRangeService.GenerateRandomNumber();
+    int number2 = @RandomNumberInRangeService.GenerateRandomNumber();
+}
+
+@{
+    ViewBag.Title = "Calculation directly";
+}
+
+<h2>Calculation Directly</h2>
+<dl class="dl-horizontal">
+    <ul>
+        <li>@number1 + @number2 = <b>@CalculationService.Addition(number1, number2)</b></li>
+        <li>@number1 - @number2 = <b>@CalculationService.Substraction(number1, number2)</b></li>
+        <li>@number1 * @number2 = <b>@CalculationService.Multiplication(number1, number2)</b></li>
+        <li>@number1 / @number2 = <b>@CalculationService.Division(number1, number2)</b></li>
+    </ul>
+</dl>
